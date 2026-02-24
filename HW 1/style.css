@@ -147,3 +147,111 @@ header {
 .owes { font-size: 0.8rem; font-weight: 600; }
 .negative { color: #fb7185; }
 .positive { color: #34d399; }
+
+/* Make cards lift when hovered */
+.glass-card {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* highlight for transactions */
+.transaction-item {
+    transition: background 0.2s ease;
+    padding: 1.2rem 0.5rem; /* Adding a bit of padding for the hover state */
+    border-radius: 12px;
+}
+
+.transaction-item:hover {
+    background: rgba(255, 255, 255, 0.03);
+    cursor: pointer;
+}
+
+/* Responsiveness */
+
+@media (max-width: 1024px) {
+    .content-grid {
+        grid-template-columns: 1fr; /* Stack the tables on top of each other */
+    }
+    
+    .sidebar {
+        width: 80px; /* Collapse sidebar */
+        padding: 2rem 1rem;
+    }
+    
+    .logo, .nav-links span, .user-profile span {
+        display: none; /* Hide text, keep icons/avatars only */
+    }
+    
+    .main-content {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr; /* Stack spend/balance/budget cards */
+    }
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Action button */
+.add-btn {
+    background: linear-gradient(135deg, var(--accent-blue), #0ea5e9);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+}
+
+.add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5);
+}
+
+/* notification banner styling */
+.notification-alert {
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 1rem 1.5rem;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    animation: slideDown 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.notification-alert p {
+    font-size: 0.9rem;
+    color: #fbbf24;
+    flex: 1;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* entry animation */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
