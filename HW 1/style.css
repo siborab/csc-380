@@ -114,3 +114,36 @@ header {
     background: #a855f7;
     border-radius: 10px;
 }
+
+/* Two-column layout for bottom section */
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+/* Group section styling */
+.member-list { margin-top: 1.5rem; }
+
+.member {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.member-info { display: flex; align-items: center; gap: 0.8rem; }
+
+.mini-avatar { 
+    width: 32px; height: 32px; border-radius: 50%; 
+    font-size: 0.7rem; display: flex; align-items: center; 
+    justify-content: center; font-weight: bold; color: white;
+}
+
+.red { background: #ef4444; }
+.orange { background: #f59e0b; }
+.blue { background: #3b82f6; }
+
+.owes { font-size: 0.8rem; font-weight: 600; }
+.negative { color: #fb7185; }
+.positive { color: #34d399; }
