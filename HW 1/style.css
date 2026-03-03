@@ -255,3 +255,49 @@ header {
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+/* added advanced feature: table rendering */
+.analytics-table {
+    display: table; /* Implements HTML table  behavior in css */
+    width: 100%;
+    margin-top: 1rem;
+    border-spacing: 0 10px; /* Space between rows */
+}
+
+.table-header {
+    display: table-row; /* Defines a row within table */
+    font-weight: 700;
+    color: var(--accent-blue);
+}
+
+.table-row {
+    display: table-row;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.table-header span, .table-row span {
+    display: table-cell; /* Renders as a table cell */
+    padding: 10px;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+/* added advanced feature: list layout */
+.advanced-list {
+    margin-top: 1rem;
+    padding-left: 20px;
+}
+
+.news-item {
+    display: list-item; /* Treats div/li as official list-item */
+    list-style-type: square; /* Customizes bullet point */
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    padding-left: 10px;
+}
+
+/* added advanced feature: Flow Root */
+.advanced-analytics, .news-feed {
+    display: flow-root; /* Creates a new block formatting context for stability */
+    margin-top: 2rem;
+}
