@@ -301,3 +301,16 @@ header {
     display: flow-root; /* Creates a new block formatting context for stability */
     margin-top: 2rem;
 }
+
+/* hover states to keep accent colors */
+.stat-card.accent-blue:hover {
+    border-left: 4px solid var(--accent-blue) !important;
+}
+
+.stat-card.accent-green:hover {
+    border-left: 4px solid #4ade80 !important;
+}
+
+.stat-card.accent-purple:hover {
+    border-left: 4px solid #a855f7 !important;
+}
